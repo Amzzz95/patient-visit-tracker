@@ -1,0 +1,107 @@
+ :root {
+  --bg-soft: #edf7f8;
+  --panel: rgba(255, 255, 255, 0.92);
+  --panel-strong: #ffffff;
+  --line: #d9ecec;
+  --text: #163238;
+  --muted: #5f7478;
+  --teal: #0f766e;
+  --teal-strong: #0a5d5a;
+  --cyan: #06b6d4;
+  --shadow: rgba(15, 118, 110, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: var(--bg-soft);
+  color: var(--text);
+}
+
+body {
+  min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+.app-shell {
+  background-image: linear-gradient(
+      rgba(240, 249, 250, 0.82),
+      rgba(236, 254, 255, 0.9)
+    ),
+    url("https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=60");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page-header {
+  backdrop-filter: blur(2px);
+}
+
+.panel-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 24px var(--shadow);
+  backdrop-filter: blur(2px);
+}
+
+.section-title {
+  letter-spacing: -0.02em;
+}
+
+.primary-button {
+  background: linear-gradient(135deg, var(--teal), var(--cyan)) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 10px !important;
+  box-shadow: 0 8px 20px rgba(15, 118, 110, 0.2) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.primary-button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+  box-shadow: 0 10px 22px rgba(15, 118, 110, 0.25) !important;
+}
+
+.primary-button:active {
+  transform: translateY(0);
+}
+
+.dropdown-select,
+.datetime-field,
+.text-field {
+  width: 100%;
+  border-radius: 10px !important;
+  border: 1px solid var(--line) !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+}
+
+.selection-box {
+  background: rgba(240, 253, 250, 0.9);
+  border: 1px solid rgba(20, 184, 166, 0.18);
+}
+
+@media (max-width: 768px) {
+  .app-shell {
+    background-attachment: scroll;
+  }
+}
